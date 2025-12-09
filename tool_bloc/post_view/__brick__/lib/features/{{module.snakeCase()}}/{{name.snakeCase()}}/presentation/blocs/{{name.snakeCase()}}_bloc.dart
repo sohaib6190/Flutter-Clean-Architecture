@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../domain/facades/{{name.snakeCase()}}_use_cases_facade.dart';
+import '../../domain/facades/{{name.snakeCase()}}_use_cases_facade.dart';
 import '{{name.snakeCase()}}_event.dart';
 import '{{name.snakeCase()}}_state.dart';
 
