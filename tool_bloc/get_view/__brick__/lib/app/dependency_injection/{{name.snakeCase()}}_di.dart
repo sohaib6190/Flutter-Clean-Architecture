@@ -10,6 +10,11 @@ import '../../features/{{module.snakeCase()}}/{{name.snakeCase()}}/presentation/
 
 final sl = GetIt.instance;
 
+/// ------------------------
+/// {{name.pascalCase()}} DEPENDENCIES
+/// ------------------------
+
+
 /// Initialize {{name.pascalCase()}} Dependencies
 void init{{name.pascalCase()}}Dependencies() {
   // Datasource
