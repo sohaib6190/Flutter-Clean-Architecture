@@ -7,6 +7,7 @@ Future<void> initializeDI() async {
   await _initCoreDependencies();
   await _initProductDependencies();
   await _initCsDependencies();
+  await _initMechanicalDependencies();
 
 }
 
@@ -97,6 +98,34 @@ Future<void> _initMechanicalDependencies() async {
 
   // BLoC
   sl.registerFactory(() => MechanicalBloc(usecases: sl()));
+}
+
+
+/// ------------------------
+/// Electrical DEPENDENCIES
+/// ------------------------
+
+Future<void> _initElectricalDependencies() async {
+  // Datasource
+  sl.registerLazySingleton<ElectricalRemoteDatasource>(
+    () => ElectricalRemoteDatasourceImplementation(client: sl()),
+  );
+
+  // Repository
+  sl.registerLazySingleton<ElectricalRepository>(
+    () => ElectricalRepositoryImplementation(remoteDatasource: sl()),
+  );
+
+  // Usecase
+  sl.registerLazySingleton(() => ElectricalUsecase(sl()));
+
+  // Facade
+  sl.registerLazySingleton(() => ElectricalUseCasesFacade(
+    electricalUsecase: sl(),
+  ));
+
+  // BLoC
+  sl.registerFactory(() => ElectricalBloc(usecases: sl()));
 }
 
 

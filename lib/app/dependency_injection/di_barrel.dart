@@ -26,6 +26,13 @@ import '../../features/suffa/mechanical/domain/facades/mechanical_use_cases_faca
 import '../../features/suffa/mechanical/domain/repositories/mechanical_repository.dart';
 import '../../features/suffa/mechanical/domain/usecases/mechanical/mechanical_usecase.dart';
 import '../../features/suffa/mechanical/presentation/blocs/mechanical_bloc.dart';
+import '../../features/suffa/electrical/data/datasources/remote/electrical_remote_datasource.dart';
+import '../../features/suffa/electrical/data/datasources/remote/electrical_remote_datasource_impl.dart';
+import '../../features/suffa/electrical/data/repositories/electrical_repository_impl.dart';
+import '../../features/suffa/electrical/domain/facades/electrical_use_cases_facade.dart';
+import '../../features/suffa/electrical/domain/repositories/electrical_repository.dart';
+import '../../features/suffa/electrical/domain/usecases/electrical/electrical_usecase.dart';
+import '../../features/suffa/electrical/presentation/blocs/electrical_bloc.dart';
 
 
 part 'di_container.dart';

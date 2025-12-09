@@ -5,25 +5,25 @@ import '../../../../../../app/errors/api_exceptions.dart';
 import '../../../../../../app/network/client/dio_client.dart';
 import '../../../../../../app/network/config/api_endpoints.dart';
 import '../../../../../../app/network/config/error_handler.dart';
-import '../../models/request/mechanical_params.dart';
-import '../../models/response/mechanical_model.dart';
-import 'mechanical_remote_datasource.dart';
+import '../../models/request/electrical_params.dart';
+import '../../models/response/electrical_model.dart';
+import 'electrical_remote_datasource.dart';
 
-class MechanicalRemoteDatasourceImplementation implements MechanicalRemoteDatasource {
+class ElectricalRemoteDatasourceImplementation implements ElectricalRemoteDatasource {
   final DioClient client;
   
-  MechanicalRemoteDatasourceImplementation({required this.client});
+  ElectricalRemoteDatasourceImplementation({required this.client});
 
   @override
-  Future<MechanicalModel> fetchMechanical(MechanicalParams params) async {
+  Future<ElectricalModel> electrical(ElectricalParams params) async {
     log("Params is $params");
     return ApiErrorHandler.executeGuarded(() async {
-      final response = await client.get(
+      final response = await client.post(
         endpoint: ApiEndpoints.changePassword.value,
-        queryParams: params.toJson(),
+        data: params.toJson(),
       );
       if (response.statusCode == 200) {
-        return MechanicalModel.fromJson(response.data);
+        return ElectricalModel.fromJson(response.data);
       } else {
         throw ServerException(
           statusCode: response.statusCode,

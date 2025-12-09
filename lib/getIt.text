@@ -1,18 +1,20 @@
-import '../../../domain/repository/suffa/mechanical_repo.dart';
-import '../../../data/rest_api/suffa/mechanical_rest_api_repo.dart';
-import '../../../features/suffa/mechanical/bloc/mechanical_bloc.dart';
-import '../../../../domain/usecase/suffa/mechanical_use_case.dart';
-import '../../../features/suffa/mechanical/mechanical_initial_params.dart';
+import '../../../domain/repository/suffa/electrical_repo.dart';
+import '../../../data/rest_api/suffa/electrical_rest_api_repo.dart';
+import '../../../features/suffa/electrical/bloc/electrical_bloc.dart';
+import '../../../../domain/usecase/suffa/electrical_use_case.dart';
+import '../../../features/suffa/electrical/electrical_initial_params.dart';
+import 'domain/validator/auth/electrical_validator.dart';
 
 
-// <<<<<<<<<<<<<<<<<<<<<<<  Mechanical  >>>>>>>>>>>>>>>>>>>>>>>
+// <<<<<<<<<<<<<<<<<<<<<<<  Electrical  >>>>>>>>>>>>>>>>>>>>>>>
 
 
-  getIt.registerSingleton<MechanicalRepo>(
-      MechanicalRestApiRepo(getIt(),getIt()));
+  getIt.registerSingleton<ElectricalRepo>(
+      ElectricalRestApiRepo(getIt(),getIt()));
+  getIt.registerSingleton<ElectricalValidator>(ElectricalValidator());
 
 
-  getIt.registerSingleton<MechanicalUseCase>(
-     MechanicalUseCase(getIt()));
+  getIt.registerSingleton<ElectricalUseCase>(
+     ElectricalUseCase(getIt(),getIt()));
 
-  getIt.registerFactoryParam<MechanicalBloc, MechanicalInitialParams, dynamic>((params, _) => MechanicalBloc(params, getIt()));
+  getIt.registerFactoryParam<ElectricalBloc, ElectricalInitialParams, dynamic>((params, _) => ElectricalBloc(params, getIt()));
