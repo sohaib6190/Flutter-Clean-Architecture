@@ -2,6 +2,7 @@
 // ADD THESE IMPORTS TO di_barrel.dart (after existing imports, before part directive)
 // ============================================================
 
+
 import '../../features/{{module.snakeCase()}}/{{name.snakeCase()}}/data/datasources/remote/{{name.snakeCase()}}_remote_datasource.dart';
 import '../../features/{{module.snakeCase()}}/{{name.snakeCase()}}/data/datasources/remote/{{name.snakeCase()}}_remote_datasource_impl.dart';
 import '../../features/{{module.snakeCase()}}/{{name.snakeCase()}}/data/repositories/{{name.snakeCase()}}_repository_impl.dart';
