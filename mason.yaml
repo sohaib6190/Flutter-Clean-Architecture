@@ -1,0 +1,13 @@
+bricks:
+  post_view:
+    path: tool_bloc/post_view
+  get_view:
+    path: tool_bloc/get_view
+  post_integration:
+    path: tool_bloc/post_integration
+  get_integration:
+    path: tool_bloc/get_integration
+  boiler_code:
+    path: tool_bloc/boiler_code
+
+

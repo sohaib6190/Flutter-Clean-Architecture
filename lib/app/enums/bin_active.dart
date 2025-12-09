@@ -1,0 +1,1 @@
+enum BinActive { Y, N }

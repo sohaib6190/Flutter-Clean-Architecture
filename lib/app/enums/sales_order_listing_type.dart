@@ -1,0 +1,1 @@
+enum SalesOrderListingType { Drafted, Completed }

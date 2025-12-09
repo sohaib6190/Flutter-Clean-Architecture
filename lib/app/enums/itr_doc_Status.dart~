@@ -1,0 +1,5 @@
+enum ITRDocStatus{
+  pending,
+  completed,
+  cancelled,
+}

@@ -1,0 +1,18 @@
+import '../../../domain/repository/qamar/sohaib_repo.dart';
+import '../../../data/rest_api/qamar/sohaib_rest_api_repo.dart';
+import '../../../features/qamar/sohaib/bloc/sohaib_bloc.dart';
+import '../../../../domain/usecase/qamar/sohaib_use_case.dart';
+import '../../../features/qamar/sohaib/sohaib_initial_params.dart';
+
+
+// <<<<<<<<<<<<<<<<<<<<<<<  Sohaib  >>>>>>>>>>>>>>>>>>>>>>>
+
+
+  getIt.registerSingleton<SohaibRepo>(
+      SohaibRestApiRepo(getIt(),getIt()));
+
+
+  getIt.registerSingleton<SohaibUseCase>(
+     SohaibUseCase(getIt()));
+
+  getIt.registerFactoryParam<SohaibBloc, SohaibInitialParams, dynamic>((params, _) => SohaibBloc(params, getIt()));

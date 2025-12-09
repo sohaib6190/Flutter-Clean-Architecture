@@ -1,0 +1,1 @@
+enum IssueForProductionResultType { check, listing }
