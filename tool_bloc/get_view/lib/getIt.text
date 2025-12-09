@@ -1,0 +1,18 @@
+import '../../../domain/repository/test/test_feature_repo.dart';
+import '../../../data/rest_api/test/test_feature_rest_api_repo.dart';
+import '../../../features/test/test_feature/bloc/test_feature_bloc.dart';
+import '../../../../domain/usecase/test/test_feature_use_case.dart';
+import '../../../features/test/test_feature/test_feature_initial_params.dart';
+
+
+// <<<<<<<<<<<<<<<<<<<<<<<  TestFeature  >>>>>>>>>>>>>>>>>>>>>>>
+
+
+  getIt.registerSingleton<TestFeatureRepo>(
+      TestFeatureRestApiRepo(getIt(),getIt()));
+
+
+  getIt.registerSingleton<TestFeatureUseCase>(
+     TestFeatureUseCase(getIt()));
+
+  getIt.registerFactoryParam<TestFeatureBloc, TestFeatureInitialParams, dynamic>((params, _) => TestFeatureBloc(params, getIt()));

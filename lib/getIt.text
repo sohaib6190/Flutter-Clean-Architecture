@@ -1,18 +1,18 @@
-import '../../../domain/repository/qamar/sohaib_repo.dart';
-import '../../../data/rest_api/qamar/sohaib_rest_api_repo.dart';
-import '../../../features/qamar/sohaib/bloc/sohaib_bloc.dart';
-import '../../../../domain/usecase/qamar/sohaib_use_case.dart';
-import '../../../features/qamar/sohaib/sohaib_initial_params.dart';
+import '../../../domain/repository/suffa/mechanical_repo.dart';
+import '../../../data/rest_api/suffa/mechanical_rest_api_repo.dart';
+import '../../../features/suffa/mechanical/bloc/mechanical_bloc.dart';
+import '../../../../domain/usecase/suffa/mechanical_use_case.dart';
+import '../../../features/suffa/mechanical/mechanical_initial_params.dart';
 
 
-// <<<<<<<<<<<<<<<<<<<<<<<  Sohaib  >>>>>>>>>>>>>>>>>>>>>>>
+// <<<<<<<<<<<<<<<<<<<<<<<  Mechanical  >>>>>>>>>>>>>>>>>>>>>>>
 
 
-  getIt.registerSingleton<SohaibRepo>(
-      SohaibRestApiRepo(getIt(),getIt()));
+  getIt.registerSingleton<MechanicalRepo>(
+      MechanicalRestApiRepo(getIt(),getIt()));
 
 
-  getIt.registerSingleton<SohaibUseCase>(
-     SohaibUseCase(getIt()));
+  getIt.registerSingleton<MechanicalUseCase>(
+     MechanicalUseCase(getIt()));
 
-  getIt.registerFactoryParam<SohaibBloc, SohaibInitialParams, dynamic>((params, _) => SohaibBloc(params, getIt()));
+  getIt.registerFactoryParam<MechanicalBloc, MechanicalInitialParams, dynamic>((params, _) => MechanicalBloc(params, getIt()));

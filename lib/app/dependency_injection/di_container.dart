@@ -5,6 +5,8 @@ final sl = GetIt.instance;
 Future<void> initializeDI() async {
   await AppPreferences().init();
   await _initCoreDependencies();
+  await _initProductDependencies();
+  await _initCsDependencies();
 
 }
 
@@ -16,6 +18,85 @@ Future<void> _initCoreDependencies() async {
   sl
     ..registerFactory(() => ThemeCubit())
     ..registerLazySingleton(() => DioClient());
+}
+
+Future<void> _initProductDependencies() async {
+  // Datasource
+  sl.registerLazySingleton<ProductRemoteDatasource>(
+    () => ProductRemoteDatasourceImplementation(client: sl()),
+  );
+
+  // Repository
+  sl.registerLazySingleton<ProductRepository>(
+    () => ProductRepositoryImplementation(remoteDatasource: sl()),
+  );
+
+  // Usecase
+  sl.registerLazySingleton(() => ProductUsecase(sl()));
+
+  // Facade
+  sl.registerLazySingleton(() => ProductUseCasesFacade(
+    productUsecase: sl(),
+  ));
+
+  // BLoC
+  sl.registerFactory(() => ProductBloc(usecases: sl()));
+}
+
+
+/// ------------------------
+/// Cs DEPENDENCIES
+/// ------------------------
+
+Future<void> _initCsDependencies() async {
+  // Datasource
+  sl.registerLazySingleton<CsRemoteDatasource>(
+    () => CsRemoteDatasourceImplementation(client: sl()),
+  );
+
+  // Repository
+  sl.registerLazySingleton<CsRepository>(
+    () => CsRepositoryImplementation(remoteDatasource: sl()),
+  );
+
+  // Usecase
+  sl.registerLazySingleton(() => CsUsecase(sl()));
+
+  // Facade
+  sl.registerLazySingleton(() => CsUseCasesFacade(
+    csUsecase: sl(),
+  ));
+
+  // BLoC
+  sl.registerFactory(() => CsBloc(usecases: sl()));
+}
+
+
+/// ------------------------
+/// Mechanical DEPENDENCIES
+/// ------------------------
+
+Future<void> _initMechanicalDependencies() async {
+  // Datasource
+  sl.registerLazySingleton<MechanicalRemoteDatasource>(
+    () => MechanicalRemoteDatasourceImplementation(client: sl()),
+  );
+
+  // Repository
+  sl.registerLazySingleton<MechanicalRepository>(
+    () => MechanicalRepositoryImplementation(remoteDatasource: sl()),
+  );
+
+  // Usecase
+  sl.registerLazySingleton(() => MechanicalUsecase(sl()));
+
+  // Facade
+  sl.registerLazySingleton(() => MechanicalUseCasesFacade(
+    mechanicalUsecase: sl(),
+  ));
+
+  // BLoC
+  sl.registerFactory(() => MechanicalBloc(usecases: sl()));
 }
 
 
