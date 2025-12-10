@@ -1,20 +1,18 @@
-import '../../../domain/repository/suffa/electrical_repo.dart';
-import '../../../data/rest_api/suffa/electrical_rest_api_repo.dart';
-import '../../../features/suffa/electrical/bloc/electrical_bloc.dart';
-import '../../../../domain/usecase/suffa/electrical_use_case.dart';
-import '../../../features/suffa/electrical/electrical_initial_params.dart';
-import 'domain/validator/auth/electrical_validator.dart';
+import '../../../domain/repository/phone/camera_repo.dart';
+import '../../../data/rest_api/phone/camera_rest_api_repo.dart';
+import '../../../features/phone/camera/bloc/camera_bloc.dart';
+import '../../../../domain/usecase/phone/camera_use_case.dart';
+import '../../../features/phone/camera/camera_initial_params.dart';
 
 
-// <<<<<<<<<<<<<<<<<<<<<<<  Electrical  >>>>>>>>>>>>>>>>>>>>>>>
+// <<<<<<<<<<<<<<<<<<<<<<<  Camera  >>>>>>>>>>>>>>>>>>>>>>>
 
 
-  getIt.registerSingleton<ElectricalRepo>(
-      ElectricalRestApiRepo(getIt(),getIt()));
-  getIt.registerSingleton<ElectricalValidator>(ElectricalValidator());
+  getIt.registerSingleton<CameraRepo>(
+      CameraRestApiRepo(getIt(),getIt()));
 
 
-  getIt.registerSingleton<ElectricalUseCase>(
-     ElectricalUseCase(getIt(),getIt()));
+  getIt.registerSingleton<CameraUseCase>(
+     CameraUseCase(getIt()));
 
-  getIt.registerFactoryParam<ElectricalBloc, ElectricalInitialParams, dynamic>((params, _) => ElectricalBloc(params, getIt()));
+  getIt.registerFactoryParam<CameraBloc, CameraInitialParams, dynamic>((params, _) => CameraBloc(params, getIt()));

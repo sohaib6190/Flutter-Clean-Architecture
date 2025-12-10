@@ -2,6 +2,7 @@
 
 import 'package:get_it/get_it.dart';
 
+import '../../features/phone/camera/domain/usecases/fetch_camera/fetch_camera_usecase.dart';
 import '../network/client/dio_client.dart';
 import '../services/app_preferences.dart';
 import '../theme/cubits/theme_cubit.dart';
@@ -33,6 +34,13 @@ import '../../features/suffa/electrical/domain/facades/electrical_use_cases_faca
 import '../../features/suffa/electrical/domain/repositories/electrical_repository.dart';
 import '../../features/suffa/electrical/domain/usecases/electrical/electrical_usecase.dart';
 import '../../features/suffa/electrical/presentation/blocs/electrical_bloc.dart';
+import '../../features/phone/camera/data/datasources/remote/camera_remote_datasource.dart';
+import '../../features/phone/camera/data/datasources/remote/camera_remote_datasource_impl.dart';
+import '../../features/phone/camera/data/repositories/camera_repository_impl.dart';
+import '../../features/phone/camera/domain/facades/camera_use_cases_facade.dart';
+import '../../features/phone/camera/domain/repositories/camera_repository.dart';
+import '../../features/phone/camera/domain/usecases/camera/camera_usecase.dart';
+import '../../features/phone/camera/presentation/blocs/camera_bloc.dart';
 
 
 part 'di_container.dart';

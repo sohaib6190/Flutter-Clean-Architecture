@@ -3,6 +3,8 @@ bricks:
     path: tool_bloc/post_view
   get_view:
     path: tool_bloc/get_view
+  get_post_view:
+    path: tool_bloc/get_post_view
   post_integration:
     path: tool_bloc/post_integration
   get_integration:

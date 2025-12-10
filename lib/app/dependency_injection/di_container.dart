@@ -8,6 +8,8 @@ Future<void> initializeDI() async {
   await _initProductDependencies();
   await _initCsDependencies();
   await _initMechanicalDependencies();
+  await _initElectricalDependencies();
+  await _initCameraDependencies();
 
 }
 
@@ -128,5 +130,34 @@ Future<void> _initElectricalDependencies() async {
   sl.registerFactory(() => ElectricalBloc(usecases: sl()));
 }
 
+
+/// ------------------------
+/// Camera DEPENDENCIES
+/// ------------------------
+
+Future<void> _initCameraDependencies() async {
+  // Datasource
+  sl.registerLazySingleton<CameraRemoteDatasource>(
+    () => CameraRemoteDatasourceImplementation(client: sl()),
+  );
+
+  // Repository
+  sl.registerLazySingleton<CameraRepository>(
+    () => CameraRepositoryImplementation(remoteDatasource: sl()),
+  );
+
+  // Usecases (both GET and POST)
+  sl.registerLazySingleton(() => FetchCameraUsecase(sl()));
+  sl.registerLazySingleton(() => CameraUsecase(sl()));
+
+  // Facade
+  sl.registerLazySingleton(() => CameraUseCasesFacade(
+    fetchCameraUsecase: sl(),
+    cameraUsecase: sl(),
+  ));
+
+  // BLoC
+  sl.registerFactory(() => CameraBloc(usecases: sl()));
+}
 
 

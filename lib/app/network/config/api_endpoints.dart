@@ -17,7 +17,13 @@ var _driver = "ZCAPI/IDriverFeature";
 var _dispatch = "ZCAPI/IDispatchOrderFeature";
 var _contractor = "ZCAPI/IContractorFeature";
 
+
+
 enum ApiEndpoints {
+
+
+
+
   /// ================= Auth =======================
   signup,
   logout,
@@ -160,6 +166,9 @@ enum ApiEndpoints {
   listContractors,
   listVehicleTypes,
   listDriversByContractor;
+
+
+  
 
   String get value {
     switch (this) {
