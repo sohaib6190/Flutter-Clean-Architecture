@@ -1,7 +1,10 @@
 
 import 'package:chucker_flutter/chucker_flutter.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_clean_architecture/features/product/product_listing/presentation/pages/product_listing_view.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../auth/presentation/pages/login_page.dart';
 import '../components/connectivity_overlay.dart';
 import '../observers/navigator_observer.dart';
 import '../services/session_service.dart';
@@ -10,12 +13,13 @@ import 'app_routes.dart';
 // import 'package:zconnect_revamp_flutter/src/features/core/production_order/presentation/pages/production_order_stock_management_page.dart';
 
 final GoRouter appRouter = GoRouter(
-  initialLocation: '/${AppRoutes.splash}',
+  initialLocation: '/${AppRoutes.productListing}',
   navigatorKey: SessionManager.navigatorKey,
   observers: [ChuckerFlutter.navigatorObserver, UnFocusOnNavigateObserver()],
   routes: [
     /// ====================== Auth Routes ======================
-    // ...authRoutes,
+    ...authRoutes,
+    ...productRoutes,
 
     /// ====================== Core Routes ======================
     ShellRoute(
@@ -27,6 +31,10 @@ final GoRouter appRouter = GoRouter(
         return ConnectivityOverlay(child: child);
       },
       routes: [
+        GoRoute(
+      path: '/dummy',
+      builder: (context, state) => SizedBox.shrink(),
+    ),
         // _dashboard(),
         // ...itrRoutes,
         // ...productionOrderRoutes,
@@ -39,15 +47,35 @@ final GoRouter appRouter = GoRouter(
   ],
 );
 
-// List<GoRoute> authRoutes = [
-//   _splash(),
-//   _login(),
-//   _verifyOtp(),
-//   _forgotPassword(),
-//   _resetPassword(),
-//   _changePassword(),
-// ];
+List<GoRoute> authRoutes = [
+ 
+  _login(),
+ 
+];
 
+
+List<GoRoute> productRoutes = [
+ 
+  _productListing(),
+ 
+];
+
+
+GoRoute _login() {
+  return GoRoute(
+    path: '/login',
+    name: AppRoutes.login,
+    builder: (context, state) => LoginPage(),
+  );
+}
+
+GoRoute _productListing() {
+  return GoRoute(
+    path: '/product_listing',
+    name: AppRoutes.productListing,
+    builder: (context, state) => ProductListingPage(),
+  );
+}
 // List<GoRoute> itrRoutes = [
 //   _itr(),
 //   _createTr(),

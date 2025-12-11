@@ -8,6 +8,7 @@ class AppRoutes {
   static const String resetPassword = 'reset_password';
   static const String changePassword = 'change_password';
   static const String verifyOtp = 'verify_otp';
+  static const String productListing = 'product_listing';
   // ============================ Core ==============================
   static const String home = 'home';
   static const String settings = 'settings';

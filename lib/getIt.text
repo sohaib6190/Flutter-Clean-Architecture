@@ -1,18 +1,18 @@
-import '../../../domain/repository/phone/camera_repo.dart';
-import '../../../data/rest_api/phone/camera_rest_api_repo.dart';
-import '../../../features/phone/camera/bloc/camera_bloc.dart';
-import '../../../../domain/usecase/phone/camera_use_case.dart';
-import '../../../features/phone/camera/camera_initial_params.dart';
+import '../../../domain/repository/product/product_listing_repo.dart';
+import '../../../data/rest_api/product/product_listing_rest_api_repo.dart';
+import '../../../features/product/product_listing/bloc/product_listing_bloc.dart';
+import '../../../../domain/usecase/product/product_listing_use_case.dart';
+import '../../../features/product/product_listing/product_listing_initial_params.dart';
 
 
-// <<<<<<<<<<<<<<<<<<<<<<<  Camera  >>>>>>>>>>>>>>>>>>>>>>>
+// <<<<<<<<<<<<<<<<<<<<<<<  ProductListing  >>>>>>>>>>>>>>>>>>>>>>>
 
 
-  getIt.registerSingleton<CameraRepo>(
-      CameraRestApiRepo(getIt(),getIt()));
+  getIt.registerSingleton<ProductListingRepo>(
+      ProductListingRestApiRepo(getIt(),getIt()));
 
 
-  getIt.registerSingleton<CameraUseCase>(
-     CameraUseCase(getIt()));
+  getIt.registerSingleton<ProductListingUseCase>(
+     ProductListingUseCase(getIt()));
 
-  getIt.registerFactoryParam<CameraBloc, CameraInitialParams, dynamic>((params, _) => CameraBloc(params, getIt()));
+  getIt.registerFactoryParam<ProductListingBloc, ProductListingInitialParams, dynamic>((params, _) => ProductListingBloc(params, getIt()));
