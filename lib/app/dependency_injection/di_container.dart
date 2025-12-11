@@ -7,6 +7,7 @@ Future<void> initializeDI() async {
   await _initCoreDependencies();
   await _initAuthDependencies();
   await _initProductListingDependencies();
+  await _initProductAddDependencies();
  
 
 }
@@ -104,4 +105,31 @@ Future<void> _initProductListingDependencies() async {
 
   // BLoC
   sl.registerFactory(() => ProductListingBloc(usecases: sl()));
+}
+
+/// ------------------------
+/// ProductAdd DEPENDENCIES
+/// ------------------------
+
+Future<void> _initProductAddDependencies() async {
+  // Datasource
+  sl.registerLazySingleton<ProductAddRemoteDatasource>(
+    () => ProductAddRemoteDatasourceImplementation(client: sl()),
+  );
+
+  // Repository
+  sl.registerLazySingleton<ProductAddRepository>(
+    () => ProductAddRepositoryImplementation(remoteDatasource: sl()),
+  );
+
+  // Usecase
+  sl.registerLazySingleton(() => ProductAddUsecase(sl()));
+
+  // Facade
+  sl.registerLazySingleton(() => ProductAddUseCasesFacade(
+    productAddUsecase: sl(),
+  ));
+
+  // BLoC
+  sl.registerFactory(() => ProductAddBloc(usecases: sl()));
 }

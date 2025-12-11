@@ -29,6 +29,13 @@ import '../../features/product/product_listing/domain/facades/product_listing_us
 import '../../features/product/product_listing/domain/repositories/product_listing_repository.dart';
 import '../../features/product/product_listing/domain/usecases/product_listing/product_listing_usecase.dart';
 import '../../features/product/product_listing/presentation/blocs/product_listing_bloc.dart';
+import '../../features/product/product_add/data/datasources/remote/product_add_remote_datasource.dart';
+import '../../features/product/product_add/data/datasources/remote/product_add_remote_datasource_impl.dart';
+import '../../features/product/product_add/data/repositories/product_add_repository_impl.dart';
+import '../../features/product/product_add/domain/facades/product_add_use_cases_facade.dart';
+import '../../features/product/product_add/domain/repositories/product_add_repository.dart';
+import '../../features/product/product_add/domain/usecases/product_add/product_add_usecase.dart';
+import '../../features/product/product_add/presentation/blocs/product_add_bloc.dart';
 
 
 part 'di_container.dart';

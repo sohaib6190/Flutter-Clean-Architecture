@@ -29,7 +29,7 @@ class _ProductListingPageState extends State<ProductListingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ProductListing'),
+        title: const Text('ProductListings'),
       ),
       body: BlocConsumer<ProductListingBloc, ProductListingState>(
         listener: (context, state) {

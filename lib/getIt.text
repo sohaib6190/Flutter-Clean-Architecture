@@ -1,18 +1,20 @@
-import '../../../domain/repository/product/product_listing_repo.dart';
-import '../../../data/rest_api/product/product_listing_rest_api_repo.dart';
-import '../../../features/product/product_listing/bloc/product_listing_bloc.dart';
-import '../../../../domain/usecase/product/product_listing_use_case.dart';
-import '../../../features/product/product_listing/product_listing_initial_params.dart';
+import '../../../domain/repository/product/product_add_repo.dart';
+import '../../../data/rest_api/product/product_add_rest_api_repo.dart';
+import '../../../features/product/product_add/bloc/product_add_bloc.dart';
+import '../../../../domain/usecase/product/product_add_use_case.dart';
+import '../../../features/product/product_add/product_add_initial_params.dart';
+import 'domain/validator/auth/product_add_validator.dart';
 
 
-// <<<<<<<<<<<<<<<<<<<<<<<  ProductListing  >>>>>>>>>>>>>>>>>>>>>>>
+// <<<<<<<<<<<<<<<<<<<<<<<  ProductAdd  >>>>>>>>>>>>>>>>>>>>>>>
 
 
-  getIt.registerSingleton<ProductListingRepo>(
-      ProductListingRestApiRepo(getIt(),getIt()));
+  getIt.registerSingleton<ProductAddRepo>(
+      ProductAddRestApiRepo(getIt(),getIt()));
+  getIt.registerSingleton<ProductAddValidator>(ProductAddValidator());
 
 
-  getIt.registerSingleton<ProductListingUseCase>(
-     ProductListingUseCase(getIt()));
+  getIt.registerSingleton<ProductAddUseCase>(
+     ProductAddUseCase(getIt(),getIt()));
 
-  getIt.registerFactoryParam<ProductListingBloc, ProductListingInitialParams, dynamic>((params, _) => ProductListingBloc(params, getIt()));
+  getIt.registerFactoryParam<ProductAddBloc, ProductAddInitialParams, dynamic>((params, _) => ProductAddBloc(params, getIt()));

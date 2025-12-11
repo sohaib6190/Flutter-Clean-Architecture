@@ -14,6 +14,7 @@ import 'app/router/app_router.dart';
 import 'app/theme/cubits/theme_cubit.dart';
 import 'auth/presentation/blocs/auth_bloc.dart';
 import 'auth/presentation/cubits/user_cubit.dart';
+import 'features/product/product_add/presentation/blocs/product_add_bloc.dart';
 import 'features/product/product_listing/presentation/blocs/product_listing_bloc.dart';
 
 Future<void> main() async {
@@ -49,7 +50,7 @@ void _runApp() {
         BlocProvider(create: (_) => sl<AuthenticationBloc>()),
         BlocProvider(create: (_) => sl<UserCubit>()),
         BlocProvider(create: (_) => sl<ProductListingBloc>()),
-        
+        BlocProvider(create: (_) => sl<ProductAddBloc>()),
 
       ],
       child: DevicePreview(enabled: false, builder: (context) => MyApp()),

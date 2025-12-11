@@ -31,6 +31,7 @@ enum ApiEndpoints {
   refreshToken,
   login,
 productListing,
+productAdd,
   /// ======================== Forget Password =========================
   forgetPassword,
   verifyOtpForForgetPassword,
@@ -184,6 +185,8 @@ productListing,
 
             case ApiEndpoints.productListing:
         return "carts";
+              case ApiEndpoints.productAdd:
+        return "posts/add";
 
       /// ==================== 2FA =====================
       case ApiEndpoints.get2FASecretKey:

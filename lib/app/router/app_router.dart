@@ -1,6 +1,7 @@
 
 import 'package:chucker_flutter/chucker_flutter.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_clean_architecture/features/product/product_add/presentation/pages/product_add_view.dart';
 import 'package:flutter_clean_architecture/features/product/product_listing/presentation/pages/product_listing_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -13,7 +14,7 @@ import 'app_routes.dart';
 // import 'package:zconnect_revamp_flutter/src/features/core/production_order/presentation/pages/production_order_stock_management_page.dart';
 
 final GoRouter appRouter = GoRouter(
-  initialLocation: '/${AppRoutes.productListing}',
+  initialLocation: '/${AppRoutes.productAdd}',
   navigatorKey: SessionManager.navigatorKey,
   observers: [ChuckerFlutter.navigatorObserver, UnFocusOnNavigateObserver()],
   routes: [
@@ -57,6 +58,7 @@ List<GoRoute> authRoutes = [
 List<GoRoute> productRoutes = [
  
   _productListing(),
+  _productAdd(),
  
 ];
 
@@ -74,6 +76,13 @@ GoRoute _productListing() {
     path: '/product_listing',
     name: AppRoutes.productListing,
     builder: (context, state) => ProductListingPage(),
+  );
+}
+GoRoute _productAdd() {
+  return GoRoute(
+    path: '/product_add',
+    name: AppRoutes.productAdd,
+    builder: (context, state) => ProductAddPage(),
   );
 }
 // List<GoRoute> itrRoutes = [
