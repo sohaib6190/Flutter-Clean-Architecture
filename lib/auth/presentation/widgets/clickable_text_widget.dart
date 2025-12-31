@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../app/components/custom_text.dart';
+import '../../../core/components/custom_text.dart';
 
 
 class ClickableTextWidget extends StatefulWidget {

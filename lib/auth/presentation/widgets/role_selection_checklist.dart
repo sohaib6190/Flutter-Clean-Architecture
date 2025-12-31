@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../app/components/custom_checkbox.dart';
-import '../../../app/constants/app_texts.dart';
+import '../../../core/components/custom_checkbox.dart';
+import '../../../core/constants/app_texts.dart';
 
 
 class RoleSelectionWidget extends StatelessWidget {

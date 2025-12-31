@@ -4,10 +4,10 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fpdart/fpdart.dart';
 
-import '../../../app/constants/app_texts.dart';
-import '../../../app/errors/api_exceptions.dart';
-import '../../../app/services/app_preferences.dart';
-import '../../../app/use_cases/use_case.dart';
+import '../../../core/constants/app_texts.dart';
+import '../../../core/errors/api_exceptions.dart';
+import '../../../core/services/app_preferences.dart';
+import '../../../core/use_cases/use_case.dart';
 import '../../data/models/request/verify_otp_request_model.dart';
 import '../../data/models/response/api_response.dart';
 import '../../data/models/response/change_password_response_model.dart';

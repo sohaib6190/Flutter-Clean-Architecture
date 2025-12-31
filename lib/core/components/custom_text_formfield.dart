@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_clean_architecture/app/components/marquee_text.dart';
+import 'package:flutter_clean_architecture/core/components/marquee_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 

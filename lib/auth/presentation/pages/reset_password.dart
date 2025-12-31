@@ -4,17 +4,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 
-import '../../../app/components/custom_button.dart';
-import '../../../app/components/custom_text.dart';
-import '../../../app/components/custom_text_formfield.dart';
-import '../../../app/components/custom_toast.dart';
-import '../../../app/components/modal_progress_hud.dart';
-import '../../../app/components/status_dialog.dart';
-import '../../../app/constants/app_palette.dart';
-import '../../../app/constants/app_texts.dart';
-import '../../../app/extensions/context_extensions.dart';
-import '../../../app/router/app_routes.dart';
-import '../../../app/utils/app_validators.dart';
+import '../../../core/components/custom_button.dart';
+import '../../../core/components/custom_text.dart';
+import '../../../core/components/custom_text_formfield.dart';
+import '../../../core/components/custom_toast.dart';
+import '../../../core/components/modal_progress_hud.dart';
+import '../../../core/components/status_dialog.dart';
+import '../../../core/constants/app_palette.dart';
+import '../../../core/constants/app_texts.dart';
+import '../../../core/extensions/context_extensions.dart';
+import '../../../core/router/app_routes.dart';
+import '../../../core/utils/app_validators.dart';
 import '../../data/models/request/reset_password_request_model.dart';
 import '../blocs/auth_bloc.dart';
 import '../blocs/auth_event.dart';

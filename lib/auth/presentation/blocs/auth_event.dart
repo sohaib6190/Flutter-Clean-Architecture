@@ -1,6 +1,6 @@
 
 
-import '../../../app/use_cases/use_case.dart';
+import '../../../core/use_cases/use_case.dart';
 import '../../data/models/request/change_password_request_model.dart';
 import '../../data/models/request/forget_password_request_model.dart';
 import '../../data/models/request/login_request_model.dart';

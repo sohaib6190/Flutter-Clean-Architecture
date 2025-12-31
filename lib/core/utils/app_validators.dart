@@ -1,5 +1,5 @@
 
-import 'package:flutter_clean_architecture/app/utils/regular_expressions.dart';
+import 'package:flutter_clean_architecture/core/utils/regular_expressions.dart';
 
 import '../constants/app_errors.dart';
 

@@ -7,10 +7,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../app/constants/asset_paths.dart';
-import '../../../app/extensions/context_extensions.dart';
-import '../../../app/router/app_routes.dart';
-import '../../../app/services/app_preferences.dart';
+import '../../../core/constants/asset_paths.dart';
+import '../../../core/extensions/context_extensions.dart';
+import '../../../core/router/app_routes.dart';
+import '../../../core/services/app_preferences.dart';
 import '../cubits/user_cubit.dart';
 
 

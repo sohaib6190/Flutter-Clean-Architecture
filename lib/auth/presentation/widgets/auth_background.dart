@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../app/extensions/context_extensions.dart';
+import '../../../core/extensions/context_extensions.dart';
 
 
 class BackgroundWrapperWidget extends StatelessWidget {

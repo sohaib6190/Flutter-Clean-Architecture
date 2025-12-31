@@ -1,7 +1,7 @@
 import 'package:flutter_clean_architecture/auth/domain/repositories/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
-import '../../../app/errors/api_exceptions.dart';
+import '../../../core/errors/api_exceptions.dart';
 import '../../domain/entities/user_entity.dart';
 import '../data_sources/remote/auth_remote_datasource.dart';
 import '../models/request/change_password_request_model.dart';

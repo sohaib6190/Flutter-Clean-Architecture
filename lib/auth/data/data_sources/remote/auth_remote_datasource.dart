@@ -1,13 +1,13 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import '../../../../app/constants/app_errors.dart';
-import '../../../../app/errors/api_exceptions.dart';
-import '../../../../app/network/client/dio_client.dart';
-import '../../../../app/network/config/api_base.dart';
-import '../../../../app/network/config/api_endpoints.dart';
-import '../../../../app/network/config/error_handler.dart';
-import '../../../../app/utils/utils.dart';
+import '../../../../core/constants/app_errors.dart';
+import '../../../../core/errors/api_exceptions.dart';
+import '../../../../core/network/client/dio_client.dart';
+import '../../../../core/network/config/api_base.dart';
+import '../../../../core/network/config/api_endpoints.dart';
+import '../../../../core/network/config/error_handler.dart';
+import '../../../../core/utils/utils.dart';
 import '../../models/request/change_password_request_model.dart';
 import '../../models/request/forget_password_request_model.dart';
 import '../../models/request/login_request_model.dart';

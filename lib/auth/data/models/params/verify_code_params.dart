@@ -1,6 +1,6 @@
 
 
-import '../../../../app/enums/verification_type.dart';
+import '../../../../core/enums/verification_type.dart';
 import '../response/user_model.dart';
 
 class VerifyCodeParams {

@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:fpdart/fpdart.dart';
 
-import '../../../app/errors/api_exceptions.dart';
-import '../../../app/use_cases/use_case.dart';
+import '../../../core/errors/api_exceptions.dart';
+import '../../../core/use_cases/use_case.dart';
 import '../../data/models/response/get_secret_key_response_model.dart';
 import '../repositories/auth_repository.dart';
 

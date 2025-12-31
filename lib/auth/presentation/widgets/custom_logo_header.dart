@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../app/constants/asset_paths.dart';
-import '../../../app/extensions/context_extensions.dart';
+import '../../../core/constants/asset_paths.dart';
+import '../../../core/extensions/context_extensions.dart';
 
 
 class CustomLogoHeader extends StatelessWidget {

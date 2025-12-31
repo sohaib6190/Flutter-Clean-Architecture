@@ -1,6 +1,6 @@
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../../../app/errors/api_exceptions.dart';
+import '../../../../../core/errors/api_exceptions.dart';
 import '../../data/models/request/product_listing_params.dart';
 import '../../data/models/response/product_listing_model.dart';
 import '../usecases/product_listing/product_listing_usecase.dart';

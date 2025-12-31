@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
-import '../../../app/constants/asset_paths.dart';
+import '../../../core/constants/asset_paths.dart';
 
 class NewConnectLogoWidget extends StatelessWidget {
   const NewConnectLogoWidget({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_clean_architecture/app/components/custom_toast.dart';
-import 'package:flutter_clean_architecture/app/constants/app_palette.dart';
+import 'package:flutter_clean_architecture/core/components/custom_toast.dart';
+import 'package:flutter_clean_architecture/core/constants/app_palette.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../data/models/request/product_listing_params.dart';

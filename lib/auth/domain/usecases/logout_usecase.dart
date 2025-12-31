@@ -1,7 +1,7 @@
 import 'package:fpdart/fpdart.dart';
 
-import '../../../app/errors/api_exceptions.dart';
-import '../../../app/use_cases/use_case.dart';
+import '../../../core/errors/api_exceptions.dart';
+import '../../../core/use_cases/use_case.dart';
 import '../repositories/auth_repository.dart';
 
 class LogoutUseCase extends UseCase<bool, NoParams> {

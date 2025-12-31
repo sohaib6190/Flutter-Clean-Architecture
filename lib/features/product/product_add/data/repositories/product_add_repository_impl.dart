@@ -1,6 +1,6 @@
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../../../app/errors/api_exceptions.dart';
+import '../../../../../core/errors/api_exceptions.dart';
 import '../../domain/repositories/product_add_repository.dart';
 import '../datasources/remote/product_add_remote_datasource.dart';
 import '../models/request/product_add_params.dart';

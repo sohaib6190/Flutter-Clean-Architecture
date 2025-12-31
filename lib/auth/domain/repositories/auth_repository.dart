@@ -1,6 +1,6 @@
 import 'package:fpdart/fpdart.dart';
 
-import '../../../app/errors/api_exceptions.dart';
+import '../../../core/errors/api_exceptions.dart';
 import '../../data/models/request/change_password_request_model.dart';
 import '../../data/models/request/forget_password_request_model.dart';
 import '../../data/models/request/login_request_model.dart';
