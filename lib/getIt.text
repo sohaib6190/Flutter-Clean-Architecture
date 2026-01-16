@@ -1,20 +1,18 @@
-import '../../../domain/repository/product/product_add_repo.dart';
-import '../../../data/rest_api/product/product_add_rest_api_repo.dart';
-import '../../../features/product/product_add/bloc/product_add_bloc.dart';
-import '../../../../domain/usecase/product/product_add_use_case.dart';
-import '../../../features/product/product_add/product_add_initial_params.dart';
-import 'domain/validator/auth/product_add_validator.dart';
+import '../../../domain/repository/cart/cartadd_repo.dart';
+import '../../../data/rest_api/cart/cartadd_rest_api_repo.dart';
+import '../../../features/cart/cartadd/bloc/cartadd_bloc.dart';
+import '../../../../domain/usecase/cart/cartadd_use_case.dart';
+import '../../../features/cart/cartadd/cartadd_initial_params.dart';
 
 
-// <<<<<<<<<<<<<<<<<<<<<<<  ProductAdd  >>>>>>>>>>>>>>>>>>>>>>>
+// <<<<<<<<<<<<<<<<<<<<<<<  Cartadd  >>>>>>>>>>>>>>>>>>>>>>>
 
 
-  getIt.registerSingleton<ProductAddRepo>(
-      ProductAddRestApiRepo(getIt(),getIt()));
-  getIt.registerSingleton<ProductAddValidator>(ProductAddValidator());
+  getIt.registerSingleton<CartaddRepo>(
+      CartaddRestApiRepo(getIt(),getIt()));
 
 
-  getIt.registerSingleton<ProductAddUseCase>(
-     ProductAddUseCase(getIt(),getIt()));
+  getIt.registerSingleton<CartaddUseCase>(
+     CartaddUseCase(getIt()));
 
-  getIt.registerFactoryParam<ProductAddBloc, ProductAddInitialParams, dynamic>((params, _) => ProductAddBloc(params, getIt()));
+  getIt.registerFactoryParam<CartaddBloc, CartaddInitialParams, dynamic>((params, _) => CartaddBloc(params, getIt()));

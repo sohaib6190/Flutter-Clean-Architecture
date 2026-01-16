@@ -1,7 +1,7 @@
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../../../../app/errors/api_exceptions.dart';
-import '../../../../../../../app/use_cases/use_case.dart';
+import '../../../../../../../core/errors/api_exceptions.dart';
+import '../../../../../../../core/use_cases/use_case.dart';
 import '../../../data/models/request/{{name.snakeCase()}}_params.dart';
 import '../../../data/models/response/{{name.snakeCase()}}_model.dart';
 import '../../repositories/{{name.snakeCase()}}_repository.dart';

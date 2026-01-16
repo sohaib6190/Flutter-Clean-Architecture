@@ -1,6 +1,6 @@
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../../../app/errors/api_exceptions.dart';
+import '../../../../../../core/errors/api_exceptions.dart';
 import '../../domain/repositories/{{name.snakeCase()}}_repository.dart';
 import '../datasources/remote/{{name.snakeCase()}}_remote_datasource.dart';
 import '../models/request/{{name.snakeCase()}}_params.dart';

@@ -8,7 +8,7 @@ Future<void> initializeDI() async {
   await _initAuthDependencies();
   await _initProductListingDependencies();
   await _initProductAddDependencies();
- 
+
 
 }
 
@@ -133,3 +133,4 @@ Future<void> _initProductAddDependencies() async {
   // BLoC
   sl.registerFactory(() => ProductAddBloc(usecases: sl()));
 }
+

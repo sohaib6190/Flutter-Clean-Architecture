@@ -37,5 +37,20 @@ import '../../features/product/product_add/domain/repositories/product_add_repos
 import '../../features/product/product_add/domain/usecases/product_add/product_add_usecase.dart';
 import '../../features/product/product_add/presentation/blocs/product_add_bloc.dart';
 
+import '../../features/cart/cartlisting/data/datasources/remote/cartlisting_remote_datasource.dart';
+import '../../features/cart/cartlisting/data/datasources/remote/cartlisting_remote_datasource_impl.dart';
+import '../../features/cart/cartlisting/data/repositories/cartlisting_repository_impl.dart';
+import '../../features/cart/cartlisting/domain/facades/cartlisting_use_cases_facade.dart';
+import '../../features/cart/cartlisting/domain/repositories/cartlisting_repository.dart';
+import '../../features/cart/cartlisting/domain/usecases/cartlisting/cartlisting_usecase.dart';
+import '../../features/cart/cartlisting/presentation/blocs/cartlisting_bloc.dart';
+import '../../features/cart/cartadd/data/datasources/remote/cartadd_remote_datasource.dart';
+import '../../features/cart/cartadd/data/datasources/remote/cartadd_remote_datasource_impl.dart';
+import '../../features/cart/cartadd/data/repositories/cartadd_repository_impl.dart';
+import '../../features/cart/cartadd/domain/facades/cartadd_use_cases_facade.dart';
+import '../../features/cart/cartadd/domain/repositories/cartadd_repository.dart';
+import '../../features/cart/cartadd/domain/usecases/cartadd/cartadd_usecase.dart';
+import '../../features/cart/cartadd/presentation/blocs/cartadd_bloc.dart';
+
 
 part 'di_container.dart';
